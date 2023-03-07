@@ -1,0 +1,54 @@
+{
+  "restaurants": [
+    {
+      "name": "KFC restaurants",
+      "email": "kfc@rest.com",
+      "address": "noida 233",
+      "id": 2
+    },
+    {
+      "name": "Zain & teaCoffee ",
+      "email": "zaintc@co.in",
+      "address": "Zambia city",
+      "id": 4
+    },
+    {
+      "name": "Ashuazua vegete",
+      "email": "ash@gmail.com",
+      "address": "singapore",
+      "id": 5
+    },
+    {
+      "name": "Om restaurant",
+      "email": "om@gmailcom",
+      "address": "jalna",
+      "id": 7
+    },
+    {
+      "name": "Manohar sweets",
+      "email": "manohar@gmail",
+      "address": "jamner 4599",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "name": "Anil sharma",
+      "email": "anil234@gmail.com",
+      "password": "Anil234",
+      "id": 1
+    },
+    {
+      "name": "Ashitosh patil",
+      "email": "ash@gmail.com",
+      "password": "Ashitosh@22",
+      "id": 2
+    },
+    {
+      "name": "Saurabh patel",
+      "email": "saurabh22@gmail.com",
+      "password": "Saurabh@11",
+      "id": 4
+    }
+  ]
+}

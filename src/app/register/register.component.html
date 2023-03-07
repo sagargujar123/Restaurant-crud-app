@@ -1,0 +1,31 @@
+<h1>Register New User</h1>
+<div class="col-sm-6">
+  <div *ngIf="alert" style="padding: 5px;" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success !</strong> New user registered successfully.
+    <button (click)="closeButton()" style="margin-left: 184px;" type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+    <form [formGroup]="register" #form1="ngForm" (ngSubmit)="registerUser(form1.value)">
+        <div class="form-group">
+          <label for="name"> Name</label>
+          <input type="text" pattern="[a-zA-Z ]*" required class="form-control" name="name" formControlName="name" placeholder="Name">
+          <span class="red-error" *ngIf="name?.invalid && name?.touched">Name is invalid</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" class="form-control" formControlName="email" placeholder="Email">
+          <span class="red-error" *ngIf="email?.invalid && email?.touched">Email is invalid</span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" minlength="8" maxlength="10" name="password" class="form-control" formControlName="password" placeholder="Password">
+            <span class="red-error" *ngIf="password?.invalid && password?.touched">Password is invalid</span>
+          </div>
+          <br>
+        <button type="submit" [disabled]="form1?.invalid" class="btn btn-primary">Register</button>
+      </form>
+</div>
+

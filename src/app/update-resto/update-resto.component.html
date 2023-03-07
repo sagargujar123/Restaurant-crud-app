@@ -1,0 +1,34 @@
+<h1>Update Restaurant</h1>
+<div class="col-sm-6">
+  <div *ngIf="alert" style="padding: 5px;" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success !</strong> Your data updated successfully.
+    <button (click)="closeButton()" style="margin-left: 184px;" type="button" class="close" data-dismiss="alert"
+      aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <form [formGroup]="editResto" #form1="ngForm" (ngSubmit)="updateResto(form1.value)">
+    <div class="form-group">
+      <label for="name">Restaurant Name</label>
+      <input type="text" pattern="[a-zA-Z ]*" required class="form-control" formControlName="name" name="restoname"
+        placeholder="Name">
+      <span class="red-error" *ngIf="name?.invalid && name?.touched">Restaurant name field is invalid</span>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" required formControlName="email" email name="email" placeholder="Email">
+      <span class="red-error" *ngIf="email?.invalid && email?.touched">Email field is invalid</span>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input type="text" pattern="[a-zA-Z0-9 ]*" required class="form-control" formControlName="address" name="address"
+        placeholder="Address">
+      <span class="red-error" *ngIf="address?.invalid && address?.touched">Address field is invalid</span>
+    </div>
+    <br>
+
+    <button type="submit" [disabled]="form1?.invalid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,23 @@
+<h1>login works!</h1>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let itr of registerData">
+        <th scope="row">{{ itr.id }}</th>
+        <td>{{ itr.name }}</td>
+        <td>{{ itr.email }}</td>
+        <td>{{ itr.password }}</td>
+        <!-- <td><i (click)="deleteResto(itr.id)" class="fa fa-trash" style="font-size:20px;color:red"></i>{{"\t"}}
+        <a routerLink="/update/{{itr.id}}"><i class="fa fa-edit" style="font-size:20px;color:blue"></i></a>
+        </td> -->
+      </tr>
+    </tbody>
+  </table> 
+  
